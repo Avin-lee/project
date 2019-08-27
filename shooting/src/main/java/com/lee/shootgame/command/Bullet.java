@@ -6,7 +6,7 @@ package com.lee.shootgame.command;
  * @Description 表示子弹，属飞行物。
  */
 public class Bullet extends FlyingObject {
-    private int speed = 3;  //向上移动的速度
+    private int speed = 5;  //向上移动的速度
     private boolean bomb;
 
     public Bullet(int x,int y){

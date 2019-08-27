@@ -1,6 +1,6 @@
 package com.lee.shootgame.command;
 
-import com.lee.shootgame.dao.Dao;
+import com.lee.shootgame.dao.ScoreDao;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -193,8 +193,8 @@ public class Game extends JPanel {
                         state = RUNNING;
                         break;
                     case GAME_OVER:  //游戏结束变为启动
-                        Dao dao = new Dao();
-                        dao.save(score);
+                        ScoreDao scoreDao = new ScoreDao();
+                        scoreDao.save(score);
                         score = 0;  //清理分数归零
                         hero = new Hero();
                         flyingObjects = new FlyingObject[0];
